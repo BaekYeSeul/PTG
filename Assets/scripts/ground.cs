@@ -2,22 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class item : MonoBehaviour
+public class ground : MonoBehaviour
 {
     public float mapSpeed = 10f;
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    // Start is called before the first frame update
+    void Start()
     {
-       
-        if (collision.gameObject.tag == "player")
-        {
-               Destroy(gameObject);
-         }
         
     }
+
+    // Update is called once per frame
     void Update()
     {
         transform.Translate(-mapSpeed * Time.deltaTime, 0, 0);
     }
-
 }
